@@ -7,4 +7,13 @@ services:
     container_name: asr-studio
     restart: unless-stopped
     ports:
-      - "8081:80"
+      - "53815:80"
+    networks:
+      - asr-studio
+      - apinetwork
+
+networks:
+  asr-studio:
+    name: asr-studio
+  apinetwork:
+    name: apinetwork
